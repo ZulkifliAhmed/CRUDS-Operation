@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>CRUDS Operation Js</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cruds-operation">
+        <h2>CRUDS Operation</h2>
+      </div>
+      <div class="form">
+        <div class="p-name">
+          <label for="p-name">product</label>
+          <input type="text" id="p-name"/>
+        </div>
+        <div class="p-details">
+          <div class="p-categories">
+            <label for="p-categories">categories</label>
+            <input type="text" id="p-categories"/>
+          </div>
+          <div class="p-quntity">
+            <label for="p-quntity">quntity</label>
+            <input type="number" id="p-quntity"/>
+          </div>
+          <div class="p-price">
+            <label for="p-price">price</label>
+            <input type="number" id="p-price"/>
+          </div>
+          <div class="p-descount">
+            <label for="p-descount">descount</label>
+            <input type="number" id="p-descount"/>
+          </div>
+          <div class="p-total">
+            <label for="p-total">total</label>
+            <div id="p-total">100</div>
+          </div>
+        </div>
+      </div>
+      <div class="add-product">
+        <button type="submit">add product</button>
+      </div>
+      <div class="producs">
+        <div class="search">
+          <input type="text" placeholder="Search">
+          <button class="s-by-name">by name</button>
+          <button class="s-by-categort">by categort</button>
+        </div>
+        <table>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>categories</th>
+            <th>quntity</th>
+            <th>price</th>
+            <th>descount</th>
+            <th>total</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>1</td>
+          <td>samsung</td>
+          <td>phone</td>
+          <td>200</td>
+          <td>5000</td>
+          <td>120</td>
+          <td>380</td>
+          <td>
+            <span>update</span>
+            <span>delet</span>
+          </td>
+         </tr>
+         <tr>
+          <td>2</td>
+          <td>iphone</td>
+          <td>appaly</td>
+          <td>300</td>
+          <td>8000</td>
+          <td>200</td>
+          <td>7600</td>
+          <td>
+            <span>update</span>
+            <span>delet</span>
+          </td>
+         </tr>
+         <tr>
+          <td>3</td>
+          <td>samsung</td>
+          <td>phone</td>
+          <td>200</td>
+          <td>5000</td>
+          <td>120</td>
+          <td>380</td>
+          <td>
+            <span>update</span>
+            <span>delet</span>
+          </td>
+         </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
