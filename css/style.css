@@ -1,1 +1,432 @@
- 
+/* Global Rulls */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  background-color: #74c0fc;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+/* Cruds Operation Title */
+.cruds-operation {
+  padding: 20px;
+  margin: 10px 0 2px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  color: #fff;
+  background-color: #2b2549;
+}
+.cruds-operation h2 {
+  font-size: 35px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+/* Form Seaction */
+.form {
+  display: flex;
+  padding: 15px;
+  gap: 30px;
+  background-color: #003f3f;
+}
+.p-name {
+  width: 20%;
+}
+.p-name input {
+  width: 100%;
+}
+.p-details {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  outline: none;
+  font-size: 16px;
+}
+.form input:focus {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #1716164f;
+}
+.form .p-details input {
+  width: 120px;
+}
+.form .p-total {
+  width: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  background-color: #d93749;
+  overflow: hidden;
+}
+/* Add Products Button */
+.add-product {
+  padding: 10px 0 40px;
+  margin-bottom: 3px;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  background-color: #003f3f;
+}
+.add-product button {
+  width: 25%;
+  padding: 15px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: #30a54a;
+  cursor: pointer;
+}
+/* Producs container Seaction*/
+.producs {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #003f3f;
+}
+.producs > div {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.producs .all-products {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.all-products .total-products {
+  font-size: 17px;
+  text-transform: capitalize;
+  color: #fff;
+}
+.all-products .total-products span {
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: #30a54a;
+  cursor: default;
+}
+.all-products .delete-all button {
+  padding: 5px 15px;
+  margin-left: 35px;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  text-transform: capitalize;
+  background-color: #d93749;
+  cursor: pointer;
+}
+.producs .search {
+  text-align: end;
+}
+.producs .search input {
+  width: 300px;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+}
+.producs .search button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.producs .search #s-by-name {
+  margin: 0 15px;
+  background-color: #30a54a;
+}
+.producs .search #s-by-categort {
+  background-color: #157ffb;
+}
+/* Tabel Data Seaction */
+table thead th {
+  width: 150px;
+  padding: 10px 0px;
+  font-size: 22px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #30a54a;
+}
+table tbody td {
+  padding: 10px 0;
+  font-size: 19px;
+  font-weight: 300;
+  text-align: center;
+  color: #003f3f;
+  background-color: #fff;
+}
+.update,
+.delete {
+  display: inline;
+  width: fit-content;
+  padding: 5px 8px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.update {
+  background-color: #157ffb;
+}
+.delete {
+  background-color: #d93749;
+}
+/* Showe Aleart message */
+.alert-div {
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  border-radius: 10px;
+  font-size: 19px;
+  text-transform: capitalize;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background-color: #30a54a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+/* Start Media Queries */
+/*devices (less than 1120px) */
+@media (max-width: 1119.98px) {
+  .container {
+    width: 90%;
+  }
+  .form {
+    gap: 20px;
+  }
+  .p-details {
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+  .update,
+  .delete {
+    display: block;
+    margin: 3px auto;
+  }
+}
+
+/*devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .p-name {
+    width: 30%;
+  }
+  .p-details {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .all-products .total-products {
+    font-size: 14px;
+  }
+  .all-products .delete-all button {
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+  .producs .search {
+    display: flex;
+  }
+  .producs .search input {
+    width: 180px;
+  }
+  .producs .search #s-by-name {
+    margin: 0 0 0x 5px;
+  }
+  table thead th {
+    width: 120px;
+    padding: 10px 0px;
+    font-size: 18px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .container {
+    width: 95%;
+  }
+  .cruds-operation {
+    padding: 10px;
+  }
+  .cruds-operation h2 {
+    font-size: 28px;
+  }
+  .form {
+    padding: 10px;
+    gap: 5px;
+  }
+  .p-name {
+    width: 25%;
+  }
+  .p-details {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .add-product {
+    padding-bottom: 20px;
+  }
+  .add-product button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .producs {
+    padding: 10px;
+  }
+  .all-products .total-products span {
+    padding: 5px 10px;
+    font-weight: 500;
+  }
+  .all-products .delete-all button {
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+  .producs .search input {
+    width: 120px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  .producs .search button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  .producs .search #s-by-name {
+    margin: 0 5px;
+  }
+  table thead th {
+    width: 100px;
+    font-size: 16px;
+    font-weight: 200;
+  }
+  table tbody td {
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: 200;
+  }
+  .alert-div {
+    width: 200px;
+    height: 80px;
+    top: 40%;
+    font-size: 16px;
+  }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .container {
+    width: 97%;
+  }
+  .cruds-operation {
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+  }
+  .cruds-operation h2 {
+    font-size: 20px;
+  }
+  .form {
+    flex-direction: column;
+  }
+  .p-name {
+    width: 100%;
+  }
+  .p-details {
+    width: 100%;
+    display: block;
+  }
+  .form label {
+    margin: 10px 0 5px;
+    font-size: 16px;
+  }
+  .form .p-details input {
+    width: 100%;
+  }
+  .add-product {
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+  }
+  .add-product button {
+    width: 50%;
+    padding: 15px;
+    font-size: 16px;
+  }
+  .producs {
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .producs > div {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .all-products .total-products {
+    margin: 10px;
+    font-size: 16px;
+  }
+  .producs .search {
+    display: flex;
+    gap: 10px;
+  }
+  .producs .search input {
+    width: 100%;
+  }
+  .producs .search button {
+    width: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  table thead th {
+    padding: 5px;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  table tbody td {
+    padding: 5px;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .update,
+  .delete {
+    padding: 3px 5px;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .alert-div {
+    width: 300px;
+    height: 70px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+}
+/* End Media Queries */
